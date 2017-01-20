@@ -24,13 +24,6 @@ exports.list = function(req, res) {
 
     res.json(users);
 
-    var users = [
-        {name: "Dave"},
-        {name: "Siem"},
-        {name: "Stijn"},
-		{name: "Joey"},
-		{name: "Abdelkarim"}
-    ];
 };
 
 /**
@@ -48,12 +41,10 @@ exports.create = function(req, res) {
 
     /*
      var newUser = new User(req.body);
-
      newUser.save(function(err) {
      if ( err ){
      return next(err);
      }
-
      res.json(newUser);
      });
      */
@@ -63,21 +54,6 @@ exports.changeName = function(req, res, next) {
     req.body.name += "je";
     next();
 };
-
-/**
- * Create a new user
- */
- exports.create = function(req, res) {
-
-     console.log("voor nu geven we altijd dezelfde lijst terug met users");
-
-     var newUser = req.body;
-
-	 users.push(newUser);
-
-     res.json(users);
- };
-
 
 /**
  * Function to lookup a particular user and store it in the request object
