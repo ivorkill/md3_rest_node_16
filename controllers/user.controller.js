@@ -18,13 +18,30 @@ exports.list = function(req, res) {
     console.log("voor nu geven we altijd dezelfde lijst terug met users");
 
     var users = [
-        {name: "Beren"},
-        {name: "Hugo"},
-        {name: "Ingrid"}
+        {name: "Dave"},
+        {name: "Siem"},
+        {name: "Stijn"},
+		{name: "Joey"},
+		{name: "Abdelkarim"}
     ];
 
     res.json(users);
 };
+
+/**
+ * Create a new user
+ */
+ exports.create = function(req, res) {
+
+     console.log("voor nu geven we altijd dezelfde lijst terug met users");
+
+     var newUser = req.body;
+
+	 users.push(newUser);
+
+     res.json(users);
+ };
+
 
 /**
  * Function to lookup a particular user and store it in the request object
